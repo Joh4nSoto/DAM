@@ -1,2 +1,2 @@
 
-Ejemplo de un readme
+Clase de FOR ( iterativo )
