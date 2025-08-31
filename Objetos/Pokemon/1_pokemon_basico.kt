@@ -1,3 +1,8 @@
+// =============================================================================
+// EJEMPLO: Crear un objeto Pokemon en Kotlin
+// =============================================================================
+
+
 // crearemos un objeto para representar un pokemon
 class Pokemon(
     // aquí van las propiedades del objeto

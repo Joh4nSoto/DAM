@@ -1,3 +1,8 @@
+// =============================================================================
+// EJEMPLO: Crear un objeto Pokemon en Kotlin con métodos que modifican su estado
+// =============================================================================
+
+
 class Pokemon(
 	val nombre: String,
     var hp: Int,

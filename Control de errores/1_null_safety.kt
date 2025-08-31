@@ -1,3 +1,7 @@
+// =============================================================================
+// EJEMPLO: Null Safety en Kotlin ( seguridad ante valores nulos )
+// =============================================================================
+
 fun main(){
 
     var a: String? = "Hola" // declaramos una variable que puede ser nula con el "?"

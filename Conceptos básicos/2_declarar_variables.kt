@@ -1,3 +1,8 @@
+// =============================================================================
+// EJEMPLO: Declarar variables en Kotlin ( algunas pueden ser mutables y otras no )
+// =============================================================================
+
+
 fun main(){
     
     val a: Int = 1 // Inmutable (esta variable no puede cambiar su valor)

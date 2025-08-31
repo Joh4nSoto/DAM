@@ -1,3 +1,7 @@
+// =============================================================================
+// EJEMPLO: Encapsulamiento en Kotlin ( modificadores de acceso )
+// =============================================================================
+
 // Ejemplo de Encapsulamiento en Kotlin
 // Demostramos los diferentes modificadores de acceso
 

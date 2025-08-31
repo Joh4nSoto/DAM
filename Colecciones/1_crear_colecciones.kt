@@ -1,3 +1,7 @@
+// =============================================================================
+// EJEMPLO: Crear colecciones en Kotlin ( listas, conjuntos y mapas )
+// =============================================================================
+
 fun main(){
 
     // definimos colecciones inmutables

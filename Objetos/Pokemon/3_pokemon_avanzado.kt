@@ -1,3 +1,7 @@
+// =============================================================================
+// EJEMPLO: Crear un sistema de Pokemones en Kotlin con herencia y polimorfismo
+// =============================================================================
+
 // Pokemon se convierte en un objeto padre ( con open ) 
 // que puede heredar propiedades y métodos a sus hijos
 open class Pokemon(
@@ -8,7 +12,7 @@ open class Pokemon(
 ){
 
     fun info(){
-        println("$nombre | HP:$hp ATK:$atk | Estado: $estado")
+        println("ℹ️ $nombre | HP:$hp ATK:$atk | Estado: $estado")
     }
     
     fun recibeDano(dano: Int) {
@@ -36,16 +40,16 @@ open class Pokemon(
 class TipoFuego(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     fun aumentarAtaque(){
         atk += 20
-        println("$nombre aumenta su ataque en 20! Ataque actual: $atk")
+        println("⚔️ $nombre aumenta su ataque en 20! Ataque actual: $atk")
     }
     
     fun lanzallamas(pokemonAlQueAtaca: Pokemon){
-        println("$nombre usa Lanzallamas contra ${pokemonAlQueAtaca.nombre}!")
+        println("🔥 $nombre usa Lanzallamas contra ${pokemonAlQueAtaca.nombre}!")
         pokemonAlQueAtaca.recibeDano(atk)
     }
     
     fun quemar(pokemonAlQueAtaca: Pokemon){
-        println("$nombre intenta quemar a ${pokemonAlQueAtaca.nombre}")
+        println("🔥 $nombre intenta quemar a ${pokemonAlQueAtaca.nombre}")
         pokemonAlQueAtaca.cambiarEstado("quemado")
     }
 }
@@ -54,14 +58,14 @@ class TipoFuego(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
 // esto es porque un pokemon de tipo agua es un pokemon
 class TipoAgua(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     fun lanzaAgua(pokemonAlQueAtaca: Pokemon){
-        println("$nombre usa Lanza Agua contra ${pokemonAlQueAtaca.nombre}!")
+        println("💧 $nombre usa Lanza Agua contra ${pokemonAlQueAtaca.nombre}!")
         pokemonAlQueAtaca.recibeDano(atk)
     }
     
     fun curar(){
         val curacion = 50
         hp += curacion
-        println("$nombre se cura y recupera $curacion HP! HP actual: $hp")
+        println("❤️ $nombre se cura y recupera $curacion HP! HP actual: $hp")
     }
 }
 
@@ -69,7 +73,7 @@ class TipoAgua(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
 // esto es porque un pokemon de tipo veneno es un pokemon
 class TipoVeneno(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     fun envenenar(pokemonAlQueAtaca: Pokemon){
-        println("$nombre envenena a ${pokemonAlQueAtaca.nombre}")
+        println("💀 $nombre envenena a ${pokemonAlQueAtaca.nombre}")
         pokemonAlQueAtaca.cambiarEstado("envenenado")
         pokemonAlQueAtaca.recibeDano(15) // el veneno causa daño inmediato
     }
@@ -79,12 +83,12 @@ class TipoVeneno(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
 // esto es porque un pokemon de tipo hielo es un pokemon
 class TipoHielo(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     fun congelar(pokemonAlQueAtaca: Pokemon){
-        println("$nombre congela a ${pokemonAlQueAtaca.nombre}")
+        println("🥶 $nombre congela a ${pokemonAlQueAtaca.nombre}")
         pokemonAlQueAtaca.cambiarEstado("congelado")
     }
     
     fun rayoDeHielo(pokemonAlQueAtaca: Pokemon){
-        println("$nombre usa Rayo de Hielo contra ${pokemonAlQueAtaca.nombre}!")
+        println("❄️ $nombre usa Rayo de Hielo contra ${pokemonAlQueAtaca.nombre}!")
         pokemonAlQueAtaca.recibeDano(atk)
     }
 }

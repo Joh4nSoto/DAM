@@ -1,5 +1,9 @@
+// =============================================================================
+// EJEMPLO: Crear un objeto básico en Kotlin
+// =============================================================================
+
 /*
-los obtetos tienen propiedades (características) y métodos (acciones o comportamientos)
+los objetos tienen propiedades (características) y métodos (acciones o comportamientos)
 un nuevo objeto se define así:
 
 class NombreDelObjeto (propiedad1: Tipo, propiedad2: Tipo, ...) {

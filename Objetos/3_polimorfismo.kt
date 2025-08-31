@@ -1,3 +1,7 @@
+// =============================================================================
+// EJEMPLO: Herencia y Polimorfismo en Kotlin
+// =============================================================================
+
 
 // Definimos la clase Vehiculo con sus propiedades y métodos
 // La clase es marcada como open para permitir herencia 

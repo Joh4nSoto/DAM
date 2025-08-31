@@ -1,3 +1,7 @@
+// =============================================================================
+// EJEMPLO: Declarar funciones en Kotlin ( bloques de código reutilizables )
+// =============================================================================
+
 fun main(){
    val a = 10
    val b = 5
@@ -20,7 +24,7 @@ fun multiplicar(a: Int, b: Int): Int {
 fun dividir(a: Int, b: Int): Int {
     // no se puede dividir por cero
     if (b == 0) {
-        println("Error: División por cero")
+        println("❌Error: División por cero")
         return 0 // o lanzar una excepción
     }
     else {

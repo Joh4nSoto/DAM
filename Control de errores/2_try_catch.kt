@@ -1,3 +1,8 @@
+// =============================================================================
+// EJEMPLO: Operadores try catch en Kotlin ( manejo de errores y excepciones )
+// =============================================================================
+
+
 fun dividir(a: Int, b: Int): Int {
     
     // se intenta ejecutar el try
@@ -6,7 +11,7 @@ fun dividir(a: Int, b: Int): Int {
     return try {
         a / b
     } catch(e: Exception) {
-        println("Error: ${e.message}")
+        println("❌Error: ${e.message}")
         0 // Retorna 0 como valor por defecto cuando hay error
     } finally {
         println("Esto se ejecuta siempre")
