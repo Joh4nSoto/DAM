@@ -31,7 +31,7 @@ open class Pokemon(
     }
 }
 
-// Tipo Fuego es un objeto que hereda propiedades de la clase padre "Pokemon"
+// Tipo Fuego es un objeto que hereda propiedades de "Pokemon"
 // esto es porque un pokemon de tipo fuego es un pokemon
 class TipoFuego(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     fun aumentarAtaque(){
@@ -50,7 +50,7 @@ class TipoFuego(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     }
 }
 
-// Tipo Agua es un objeto que hereda propiedades de la clase padre "Pokemon"
+// Tipo Agua es un objeto que hereda propiedades de "Pokemon"
 // esto es porque un pokemon de tipo agua es un pokemon
 class TipoAgua(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     fun lanzaAgua(pokemonAlQueAtaca: Pokemon){
@@ -65,7 +65,7 @@ class TipoAgua(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     }
 }
 
-// Tipo Veneno es un objeto que hereda propiedades de la clase padre "Pokemon"
+// Tipo Veneno es un objeto que hereda propiedades de "Pokemon"
 // esto es porque un pokemon de tipo veneno es un pokemon
 class TipoVeneno(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     fun envenenar(pokemonAlQueAtaca: Pokemon){
@@ -75,7 +75,7 @@ class TipoVeneno(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     }
 }
 
-// Tipo Hielo es un objeto que hereda propiedades de la clase padre "Pokemon"
+// Tipo Hielo es un objeto que hereda propiedades de "Pokemon"
 // esto es porque un pokemon de tipo hielo es un pokemon
 class TipoHielo(nombre: String, hp: Int, atk: Int): Pokemon(nombre, hp, atk){
     fun congelar(pokemonAlQueAtaca: Pokemon){
@@ -95,44 +95,44 @@ fun main() {
     println("**************************")
     
     // Instanciamos dos pokemones ( uno tipo fuego y otro tipo agua )
-    val char = TipoFuego("Charmander", 100, 40) // este es un charmander con 100 de hp y 40 de atk
-    val lapr = TipoAgua("Lapras", 180, 50) //este es un lapras con 180 de hp y 50 de atk
-    
+    val charmander = TipoFuego("Charmander", 100, 40) // este es un charmander con 100 de hp y 40 de atk
+    val lapras = TipoAgua("Lapras", 180, 50) //este es un lapras con 180 de hp y 50 de atk
+
     println("\n--- ESTADO INICIAL ---")
-    char.info()
-    lapr.info()
-    
+    charmander.info()
+    lapras.info()
+
     println("\n--- COMIENZA LA BATALLA ---")
-    
-    // Turno 1: Charmander ataca
+
+    // Turno 1: Charmander ataca con lanzallamas a Lapras
     println("\nTurno 1:")
-    char.lanzallamas(lapr)
+    charmander.lanzallamas(lapras)
     
     // Turno 2: Lapras se cura
     println("\nTurno 2:")
-    lapr.curar()
-    
-    // Turno 3: Charmander aumenta su ataque y luego quema
+    lapras.curar()
+
+    // Turno 3: Charmander aumenta su ataque y luego quema a Lapras
     println("\nTurno 3:")
-    char.aumentarAtaque()
-    char.quemar(lapr)
-    
-    // Turno 4: Lapras ataca con agua
+    charmander.aumentarAtaque()
+    charmander.quemar(lapras)
+
+    // Turno 4: Lapras ataca con agua a Charmander
     println("\nTurno 4:")
-    lapr.lanzaAgua(char)
-    
+    lapras.lanzaAgua(charmander)
+
     println("\n--- ESTADO FINAL ---")
-    char.info()
-    lapr.info()
-    
+    charmander.info()
+    lapras.info()
+
     // Verificamos quién ganó, esto finalmente depende de los atk y hp instanciados
     println("\n--- RESULTADO ---")
-    if (char.estaVivo() && lapr.estaVivo()) {
+    if (charmander.estaVivo() && lapras.estaVivo()) {
         println("¡Ambos pokemones siguen en pie!")
-    } else if (char.estaVivo()) {
-        println("¡${char.nombre} es el ganador!")
-    } else if (lapr.estaVivo()) {
-        println("¡${lapr.nombre} es el ganador!")
+    } else if (charmander.estaVivo()) {
+        println("¡${charmander.nombre} es el ganador!")
+    } else if (lapras.estaVivo()) {
+        println("¡${lapras.nombre} es el ganador!")
     } else {
         println("¡Es un empate! Ambos pokemones están derrotados.")
     }
